@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const adminSchema = new mongoose.Schema({
+const orderSchema = new mongoose.Schema({
     ProdcutID: { type: String, required: true, unique: true },
     title: { type: String, required: true },
     description: { type: String, required: true },
@@ -9,7 +9,7 @@ const adminSchema = new mongoose.Schema({
    totalprice: { type: String, required: true },
   });
 
-  const order = mongoose.model('Admin', adminSchema);
+  const Order = mongoose.model('Order', orderSchema);
 
 
 export default Order;

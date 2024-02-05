@@ -17,7 +17,7 @@ app.use(morgan('dev'));
 app.use(express.json()); 
 
 app.use('/api/admin',authenticateUser, adminRoutes)
-app.use('/api/user',authenticateUser, userRoutes)
+app.use('/api/user', userRoutes)
 app.use('/api/product',authenticateUser, productRoutes)
 
 connectDB(process.env.MONGO_URI).then(() => {
